@@ -70,7 +70,8 @@ typedef NS_ENUM(NSInteger, YTKRequestPriority) {
 
 typedef void (^AFConstructingBlock)(id<AFMultipartFormData> formData);
 typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
-
+typedef NSString * (^AFQueryStringSerializationBlock)(NSURLRequest *request, id parameters, NSError *__autoreleasing *error);
+    
 @class YTKBaseRequest;
 
 typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
@@ -208,6 +209,9 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 ///  This can be use to construct HTTP body when needed in POST request. Default is nil.
 @property (nonatomic, copy, nullable) AFConstructingBlock constructingBodyBlock;
+
+///  This can be use to custom query StringSerialization HTTP body when needed in POST request. Default is nil.
+@property (nonatomic, copy, nullable) AFQueryStringSerializationBlock queryStringSerializationBlock;
 
 ///  This value is used to perform resumable download request. Default is nil.
 ///

@@ -142,7 +142,9 @@
     } else if (request.requestSerializerType == YTKRequestSerializerTypeJSON) {
         requestSerializer = [AFJSONRequestSerializer serializer];
     }
-
+    if (request.queryStringSerializationBlock) {
+        [requestSerializer setQueryStringSerializationWithBlock:request.queryStringSerializationBlock];
+    }
     requestSerializer.timeoutInterval = [request requestTimeoutInterval];
     requestSerializer.allowsCellularAccess = [request allowsCellularAccess];
 

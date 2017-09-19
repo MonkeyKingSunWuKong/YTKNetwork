@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
-  s.name         = "YTKNetwork"
+  s.name         = "YYYTKNetwork"
   s.version      = "2.0.4"
-  s.summary      = "YTKNetwork is a high level request util based on AFNetworking."
+  s.summary      = "YTKNetwork is a high level request util based on AFNetworking. This is a temporary version"
   s.homepage     = "https://github.com/yuantiku/YTKNetwork"
   s.license      = "MIT"
   s.author       = {
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                     "maojj" => "maojj@fenbi.com",
                     "liujl" => "liujl@fenbi.com"
  }
-  s.source        = { :git => "https://github.com/yuantiku/YTKNetwork.git", :tag => s.version.to_s }
+  s.source        = { :git => "https://github.com/MonkeyKingSunWuKong/YTKNetwork.git", :tag => s.version.to_s }
   s.source_files  = "YTKNetwork/*.{h,m}"
   s.requires_arc  = true
 
