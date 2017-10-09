@@ -170,6 +170,7 @@
     YTKRequestMethod method = [request requestMethod];
     NSString *url = [self buildRequestUrl:request];
     id param = request.requestArgument;
+    param = [request requestArgumentCustomProcess:request.requestArgument];
     AFConstructingBlock constructingBlock = [request constructingBodyBlock];
     AFHTTPRequestSerializer *requestSerializer = [self requestSerializerForRequest:request];
 
@@ -329,6 +330,7 @@
                 break;
             case YTKResponseSerializerTypeJSON:
                 request.responseObject = [self.jsonResponseSerializer responseObjectForResponse:task.response data:request.responseData error:&serializationError];
+                request.responseObject = [request responseArgumentCustomProcess:request.responseObject];
                 request.responseJSONObject = request.responseObject;
                 break;
             case YTKResponseSerializerTypeXMLParser:

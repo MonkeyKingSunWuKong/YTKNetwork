@@ -232,6 +232,13 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 - (void)setCompletionBlockWithSuccess:(nullable YTKRequestCompletionBlock)success
                               failure:(nullable YTKRequestCompletionBlock)failure;
 
+/// encryption process and so on
+- (id)requestArgumentCustomProcess:(id)requestArgument;
+
+/// decryption process and so on
+- (id)responseArgumentCustomProcess:(id)responseArgument;
+
+
 ///  Nil out both success and failure callback blocks.
 - (void)clearCompletionBlock;
 

@@ -84,6 +84,14 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 
 #pragma mark - Request Configuration
 
+- (id)requestArgumentCustomProcess:(id)requestArgument;{
+    return requestArgument;
+}
+
+- (id)responseArgumentCustomProcess:(id)responseArgument{
+    return responseArgument;
+}
+
 - (void)setCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success
                               failure:(YTKRequestCompletionBlock)failure {
     self.successCompletionBlock = success;

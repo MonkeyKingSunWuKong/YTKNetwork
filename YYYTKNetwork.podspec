@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YYYTKNetwork"
-  s.version      = "2.0.4"
+  s.version      = "2.0.6"
   s.summary      = "YTKNetwork is a high level request util based on AFNetworking. This is a temporary version"
   s.homepage     = "https://github.com/yuantiku/YTKNetwork"
   s.license      = "MIT"
